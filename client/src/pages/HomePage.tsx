@@ -387,19 +387,8 @@ export default function HomePage() {
       <MentorsSection onReachMentors={handleReachMentors} />
 
       {/* ── Auth gate ────────────────────────────── */}
-      {user ? (
-        <>
-          <StudentLifeSection />
-          <EventsGallery />
-          <CounselorCTA onOpenCall={() => setShowCallPopup(true)} />
-          <HiringStatsSection />
-          <Footer />
-        </>
-      ) : (
-        <>
-          <GateSection onSignup={() => setShowSignupPopup(true)} />
-          <Footer />
-        </>
+      {!user && (
+        <GateSection onSignup={() => setShowSignupPopup(true)} />
       )}
 
       {/* ── Overlays ─────────────────────────────── */}
