@@ -165,8 +165,7 @@ function GateSection({ onSignup }: { onSignup: () => void }) {
           padding: "24px 20px",
         }}
       >
-        <Reveal style={{ width: "100%", maxWidth: 640 } as React.CSSProperties}>
-          <div
+        <div
             style={{
               background: "#ffffff",
               borderRadius: 28,
