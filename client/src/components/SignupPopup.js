@@ -1,0 +1,8 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { Link } from "react-router-dom";
+import { X, GraduationCap } from "lucide-react";
+export default function SignupPopup({ show, onClose }) {
+    if (!show)
+        return null;
+    return (_jsx("div", { className: "fixed inset-0 z-[60] flex items-center justify-center bg-black/50 px-4", children: _jsxs("div", { className: "bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative", children: [_jsx("button", { onClick: onClose, className: "absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200", children: _jsx(X, { className: "w-5 h-5" }) }), _jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-14 h-14 bg-maroon/10 rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx(GraduationCap, { className: "w-7 h-7 text-maroon" }) }), _jsx("h3", { className: "font-heading text-2xl font-bold text-gray-900 mb-2", children: "Unlock Full Access" }), _jsx("p", { className: "text-gray-500 text-sm mb-6", children: "Sign up to explore our mentors, campus life, placements, and get AI-powered counseling." }), _jsx(Link, { to: "/signup", onClick: onClose, className: "block w-full bg-maroon text-white py-3 rounded-lg font-semibold hover:bg-maroon-dark transition-colors duration-200 mb-3", children: "Create Free Account" }), _jsxs("p", { className: "text-sm text-gray-500", children: ["Already have an account?", " ", _jsx(Link, { to: "/login", onClick: onClose, className: "text-maroon font-medium hover:underline", children: "Sign In" })] })] })] }) }));
+}
